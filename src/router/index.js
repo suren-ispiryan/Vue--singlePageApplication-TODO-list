@@ -8,10 +8,6 @@ export default new VueRouter({
   mode: 'history',
   routes: [
     {
-      path: '*/*',
-      redirect: {name: 'LogIn'},
-    },
-    {
       path: '/',
       name: 'LogIn',
       component: LogInComponent
@@ -20,6 +16,10 @@ export default new VueRouter({
       path: '/Signup',
       name: 'SignUp',
       component: SignUpComponent
+    },
+    {
+      path: '*/*',
+      redirect: {name: 'LogIn'}
     }
   ]
 })
