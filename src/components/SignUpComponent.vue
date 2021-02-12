@@ -29,6 +29,7 @@ export default {
     }
   },
   mounted () {
+    /* if no table user create it */
     let users = localStorage.getItem('Users')
     if (!users) {
       localStorage.setItem('Users', JSON.stringify([{
@@ -42,6 +43,7 @@ export default {
 
   methods: {
     getUsersData () {
+      /* put signup-ed user's data into the User table */
       let usersData = JSON.parse(localStorage.getItem('Users'))
       let usersDataObj = []
       for (let i in usersData) {
@@ -53,7 +55,7 @@ export default {
         this.email.match(/^\w+[+.\w-]*@([\w-]+\.)*\w+[\w-]*\.([a-z]{2,4}|\d+)$/i) &&
         this.password.match(/^[0-9a-zA-Z]+$/) &&
         this.password === this.confirmPassword) {
-        /* put user data into localStorage user table */
+        /* put user data into localStorage user table and redirect to login component */
         let userObj = {
           'firstName': this.firstName,
           'lastName': this.lastName,
@@ -62,6 +64,7 @@ export default {
         }
         usersDataObj.push(userObj)
         localStorage.setItem('Users', JSON.stringify(usersDataObj))
+        this.$router.push('/')
       } else {
         alert('please check your data')
       }
