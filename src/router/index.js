@@ -15,17 +15,17 @@ export default new VueRouter({
       component: LogInComponent
     },
     {
-      path: '/Signup',
+      path: '/signup',
       name: 'SignUp',
       component: SignUpComponent
     },
     {
-      path: '/Admin',
+      path: '/admin',
       name: 'Admin',
       component: AdminCreateTodoPage
     },
     {
-      path: '/User',
+      path: '/user',
       name: 'User',
       component: UserCreateTodoPage
     },
