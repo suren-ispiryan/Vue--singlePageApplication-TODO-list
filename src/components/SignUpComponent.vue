@@ -160,8 +160,10 @@ export default {
    width: 100%;
  }
  label{
+   width: 100%;
+   text-align: left;
    padding: 0;
-   margin: 0;
+   margin: 0 0 0 5px;
    color: red;
  }
 </style>

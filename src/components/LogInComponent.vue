@@ -60,12 +60,12 @@ export default {
           this.$router.push('/user')
         }
         /* error messages */
-        if (this.logMail === '') {
+        if (this.logMail === '' || !(usersDataObj[i]['mail'].includes(this.logMail))) {
           let message = 'please check email'
           this.messageLoginEmail = message
         }
-        if (this.logPassword === '') {
-          let message = 'please fill password'
+        if (this.logPassword === '' || !(usersDataObj[i]['password'].includes(this.logPassword))) {
+          let message = 'please check password'
           this.messageLoginPassword = message
         }
       }
@@ -111,8 +111,10 @@ export default {
    width: 100%;
  }
  label{
+   width: 100%;
+   text-align: left;
    padding: 0;
-   margin: 0;
+   margin: 0 0 0 5px;
    color: red;
  }
 </style>
