@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <input type="button" value="User">
+  <div class="user-parent mt-5">
+    <h1> User </h1>
+    <hr class="mb-2">
   </div>
 </template>
 
@@ -11,5 +12,9 @@ export default {
 </script>
 
 <style scoped>
-
+ hr{
+   background-color: grey;
+   height: 1px;
+   width: 90%;
+ }
 </style>
