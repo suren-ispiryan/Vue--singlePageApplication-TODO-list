@@ -9,8 +9,8 @@
               <div class="parent">
                 <form class="mt-5 mb-5">
                   <h1 class="mt-5 mb-2">Log in</h1>
-                  <label> {{ messageLoginEmail }} </label>
-                  <input v-model="logMail" class="form-control mt-1" type="email" placeholder="Your email" autocomplete="off">
+                  <label for="log"> {{ messageLoginEmail }} </label>
+                  <input v-model="logMail" class="form-control mt-1" type="email" placeholder="Your email" autocomplete="off" id="log">
                   <label> {{ messageLoginPassword }} </label>
                   <input v-model="logPassword" class="form-control mt-1" type="password" placeholder="Your password" autocomplete="off">
                   <input class="form-control mt-4 btn btn-primary" type="button" value="log in" v-on:click="enterAccount()">
