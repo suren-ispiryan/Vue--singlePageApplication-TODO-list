@@ -23,11 +23,16 @@
         <span class="id pt-1 pb-1">Id</span>
         <span class="task pt-1 pb-1">User tasks</span>
         <span class="delete pt-1 pb-1">Delete</span>
+
       </li>
       <!-- repeteing component li -->
-      <TaskListLiComponent />
+      <TaskListLiComponent
+          :key="index"
+          v-for="(task,index) in choosen"
+          v-bind:index="index"
+          v-bind:task="task"
+      />
     </ul>
-
   </div>
 </template>
 

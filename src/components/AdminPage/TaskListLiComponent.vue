@@ -1,7 +1,7 @@
 <template>
   <li class="pt-1 pb-1">
-    <span class="id">Id</span>
-    <span class="task">change User tasks</span>
+    <span class="id">{{ index + 1 }}</span>
+    <span class="task"> {{ task }} </span>
     <span class="delete">
       <input type="button" class="btn btn-danger btn" value="x" v-on:click="deleteTask()">
     </span>
@@ -11,9 +11,10 @@
 <script>
 export default {
   name: 'TaskListLiComponent',
+  props: ['index', 'task'],
   methods: {
     deleteTask () {
-    //  delete task
+    //  delete task from local storage
     }
   }
 }
